@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stavební firma | S Stavby</title>
+    <link rel="icon" href="components/pictures/favicon/FVCN.ico">
+    <link href="https://fonts.cdnfonts.com/css/hero-new" rel="stylesheet">
+    <link rel="stylesheet" href="components/style.css?version=3.2">
+</head>
+<body>
+    <nav id="navbar">
+        <div class="logo">
+            <img src="components/pictures/logos/LOGO.png" alt="logo">
+        </div>
+        <div class="links">
+            <ul id="links_nav">
+                <li><a href="index.html">DOMŮ</a></li>
+                <li><a href="index.html#about">O NÁS</a></li>
+                <li><a href="developer.html">DEVELOPERSKÉ PROJEKTY</a></li>
+                <li><a href="#pronajem">PRONÁJEM</a></li>
+                <li><a href="index.html#services">STAVBA</a></li>
+                <li><a href="index.html#reference">REFERENCE</a></li>
+                <li><a href="#contact">KONTAKT</a></li>
+            </ul>
+        </div>
+        <div id="chb">
+            <input type="checkbox" id="menu_checkbox" onclick="myFunction();test()">
+            <label for="menu_checkbox">
+                <div id="first"></div>
+                <div id="second"></div>
+                <div id="third"></div>
+            </label>
+        </div>
+    </nav>
+    <nav id="navbar_mobile">
+        <div class="links">
+            <ul id="links_nav">
+                <li><a href="index.html">DOMŮ</a></li>
+                <li><a href="index.html#about">O NÁS</a></li>
+                <li><a href="developer.html">DEVELOPERSKÉ PROJEKTY</a></li>
+                <li><a href="#pronajem">PRONÁJEM</a></li>
+                <li><a href="index.html#services">STAVBA</a></li>
+                <li><a href="index.html#reference">REFERENCE</a></li>
+                <li><a href="#contact">KONTAKT</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="pronajem">
+        <a href="index.html"><img src="components/pictures/logos/LOGO.png" alt="logo"></a>
+        <div class="middle">
+            <h1>PRONÁJEM</h1>
+            <p style="text-align: justify;">Naše firma nabízí širokou škálu bytových a komerčních prostor, které splní vaše individuální
+                potřeby. Poskytujeme moderní a kvalitně vybavené byty v atraktivních lokalitách, které zajistí
+                pohodlné a příjemné bydlení. Pro podnikatele nabízíme flexibilní komerční prostory, které jsou
+                ideální pro různé typy podnikání, od kanceláří po obchodní jednotky. Naším cílem je poskytovat
+                prostory, které podporují vaše osobní i profesní úspěchy. Kontaktujte nás pro více informací a
+                najděte ideální prostory pro váš život nebo podnikání.</p>
+            <div class="main_buttons">
+                <a class="button" href="#subjekty" style="width: 100%;">SUBJEKTY</a>
+            </div>
+        </div>
+        <div id="arrowdown">
+            <a href="#subjekty" id="arrowd"><i class="arrow_down"></i></a>
+        </div>
+        <div id="arrowup">
+            <a href="#pronajem" id="arrowu"><i class="arrow_up"></i></a>
+        </div>
+    </section>
+    <section id="subjekty">
+        <section id="subjekt1" class="mySlides fade">
+            <div class="page">
+                <div class="name">
+                    <h2>MLEJN</h2>
+                        <div class="buttons_pronajem">
+                            <a class="button" onclick="myFunctionR1();myFunctionGal1()">GALERIE</a>
+                            <a class="button" onclick="myFunctionR1();myFunctionInfo1()">VÍCE INFORMACÍ</a>
+                        </div>
+                </div>
+            </div>
+        </section>
+        <section id="subjekt2" class="mySlides fade">
+            <div class="page">
+                <div class="name">
+                    <h2>REZIDENCE NOVEM - PARKOVACÍ MÍSTA / PODĚBRADY</h2>
+                    <div class="buttons_pronajem">
+                        <a class="button" onclick="myFunctionR1();myFunctionGal2()">GALERIE</a>
+                        <a class="button" onclick="myFunctionR1();myFunctionInfo2()">VÍCE INFORMACÍ</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="subjekt3" class="mySlides fade">
+            <div class="page">
+                <div class="name">
+                    <h2>APARTMÁNY / PODĚBRADY</h2>
+                    <div class="buttons_pronajem">
+                        <a class="button" onclick="myFunctionR1();myFunctionGal3()">GALERIE</a>
+                        <a class="button" onclick="myFunctionR1();myFunctionInfo3()">VÍCE INFORMACÍ</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="subjekt4" class="mySlides fade">
+            <div class="page">
+                <div class="name">
+                    <h2>AREÁL / KŘEČKOV</h2>
+                    <div class="buttons_pronajem">
+                        <a class="button" onclick="myFunctionR1();myFunctionGal4()">GALERIE</a>
+                        <a class="button" onclick="myFunctionR1();myFunctionInfo4()">VÍCE INFORMACÍ</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div id="popup_reference">
+            <div id="info1">
+                <h2>MLEJN</h2>
+                <p>Naše firma nabízí k pronájmu atraktivní komerční prostor v Poděbradech, přímo u
+                    řeky Labe, ideální k provozování bistra. Tento prostor je skvělou volbou pro
+                    podnikatele, kteří chtějí využít výhod jedinečné lokality s vysokou návštěvností a
+                    příjemnou atmosférou u vody. Prostor je připraven k provozu, s možností úprav dle
+                    vašich představ, aby splňoval veškeré požadavky na moderní gastro provoz. Díky
+                    strategickému umístění v turisticky oblíbené oblasti máte zajištěn stálý přísun
+                    zákazníků.<br>Pro více informací a prohlídku nás neváhejte kontaktovat.</p>
+                    <div class="main_buttons">
+                        <a href="#contact" class="button">KONTAKT</a>
+                    </div>
+            </div>
+            <div id="info2">
+                <h2>PARKOVACÍ MÍSTA</h2>
+                <p>Naše firma nabízí k pronájmu parkovací místa v poděbradské rezidenci, která se
+                    nachází přímo v centru města. Tato parkovací místa jsou ideální pro obyvatele
+                    rezidence i pro ty, kteří pravidelně navštěvují centrum Poděbrad a chtějí mít jistotu
+                    pohodlného a bezpečného parkování. Parkovací místa jsou snadno přístupná a
+                    zajišťují komfortní parkování v blízkosti všech důležitých městských služeb a atrakcí.
+                    <br>Pro více informací o podmínkách pronájmu nás neváhejte kontaktovat.</p>
+                    <div class="main_buttons">
+                        <a href="#contact" class="button">KONTAKT</a>
+                    </div>
+            </div>
+            <div id="info3">
+                <h2>APARTMÁNY</h2>
+                <p><b>SERVISOVANÉ APARTMÁNY</b><br>
+                    Projekt nabízí 31 nových, plně vybavených
+                    a na míru zařízených apartmánů k pronájmu
+                    v atraktivní lokalitě centra města. Apartmánový
+                    komplex se nachází na adrese Za Nádražím 58 v
+                    Poděbradech.</p>
+                <div class="main_buttons">
+                    <a href="https://www.cleverproperties.cz" target="_blank" class="button">ZJISTIT DOSTUPNOST</a>
+                </div>
+            </div>
+            <div id="info4">
+                <h2>AREÁL</h2>
+                <p>Naše firma nabízí k pronájmu areál v Křečkově o výměře 25 000m². Tento areál je
+                    ideální pro širokou škálu podnikatelských činností, od skladování až po lehkou
+                    výrobu. Prostor je dobře přístupný, nachází se v klidné lokalitě s dobrou dopravní
+                    dostupností. Nabízíme flexibilní možnosti pronájmu, které se přizpůsobí vašim
+                    potřebám. Areál je vybaven potřebnou infrastrukturou a bezpečnostními prvky, aby
+                    zajistil pohodlné a bezpečné fungování vaší činnosti.<br>
+                    Pro více informací a prohlídku areálu nás neváhejte kontaktovat.</p>
+                    <div class="main_buttons">
+                        <a href="#contact" class="button">KONTAKT</a>
+                    </div>
+            </div>
+            <div id="gal1" class="gallery">
+                <img src="components/pictures/pages_bg/subjekty/galerie/sub1/1.webp" alt="gal1.1" class="mySlidesImg fade">
+                <img src="components/pictures/pages_bg/subjekty/galerie/sub1/2.webp" alt="gal1.2" class="mySlidesImg fade">
+                <img src="components/pictures/pages_bg/subjekty/galerie/sub1/3.webp" alt="gal1.3" class="mySlidesImg fade">
+                <img src="components/pictures/pages_bg/subjekty/galerie/sub1/4.webp" alt="gal1.4" class="mySlidesImg fade">
+                <img src="components/pictures/pages_bg/subjekty/galerie/sub1/5.webp" alt="gal1.5" class="mySlidesImg fade">
+                <img src="components/pictures/pages_bg/subjekty/galerie/sub1/6.webp" alt="gal1.6" class="mySlidesImg fade">
+                <img src="components/pictures/pages_bg/subjekty/galerie/sub1/7.webp" alt="gal1.7" class="mySlidesImg fade">
+            </div>
+            <div id="gal2" class="gallery">
+                <img src="components/pictures/pages_bg/subjekty/galerie/sub2/1.webp" alt="gal2.1" class="mySlidesImg fade">
+                <img src="components/pictures/pages_bg/subjekty/galerie/sub2/2.webp" alt="gal2.2" class="mySlidesImg fade">
+                <img src="components/pictures/pages_bg/subjekty/galerie/sub2/3.webp" alt="gal2.3" class="mySlidesImg fade">
+                <img src="components/pictures/pages_bg/subjekty/galerie/sub2/4.webp" alt="gal2.4" class="mySlidesImg fade">
+                <img src="components/pictures/pages_bg/subjekty/galerie/sub2/5.webp" alt="gal2.5" class="mySlidesImg fade">
+                <img src="components/pictures/pages_bg/subjekty/galerie/sub2/6.webp" alt="gal2.6" class="mySlidesImg fade">
+                <img src="components/pictures/pages_bg/subjekty/galerie/sub2/7.webp" alt="gal2.7" class="mySlidesImg fade">
+                <img src="components/pictures/pages_bg/subjekty/galerie/sub2/8.webp" alt="gal2.8" class="mySlidesImg fade">
+                <img src="components/pictures/pages_bg/subjekty/galerie/sub2/9.webp" alt="gal2.9" class="mySlidesImg fade">
+            </div>
+            <div id="gal3" class="gallery">
+                <img src="components/pictures/pages_bg/subjekty/galerie/sub3/1.webp" alt="gal3.1" class="mySlidesImg fade">
+                <img src="components/pictures/pages_bg/subjekty/galerie/sub3/2.webp" alt="gal3.2" class="mySlidesImg fade">
+                <img src="components/pictures/pages_bg/subjekty/galerie/sub3/3.webp" alt="gal3.3" class="mySlidesImg fade">
+                <img src="components/pictures/pages_bg/subjekty/galerie/sub3/4.webp" alt="gal3.4" class="mySlidesImg fade">
+                <img src="components/pictures/pages_bg/subjekty/galerie/sub3/5.webp" alt="gal3.5" class="mySlidesImg fade">
+                <img src="components/pictures/pages_bg/subjekty/galerie/sub3/6.webp" alt="gal3.6" class="mySlidesImg fade">
+                <img src="components/pictures/pages_bg/subjekty/galerie/sub3/7.webp" alt="gal3.7" class="mySlidesImg fade">
+                <img src="components/pictures/pages_bg/subjekty/galerie/sub3/8.webp" alt="gal3.8" class="mySlidesImg fade">
+                <img src="components/pictures/pages_bg/subjekty/galerie/sub3/9.webp" alt="gal3.9" class="mySlidesImg fade">
+                <img src="components/pictures/pages_bg/subjekty/galerie/sub3/10.webp" alt="gal3.10" class="mySlidesImg fade">
+                <img src="components/pictures/pages_bg/subjekty/galerie/sub3/11.webp" alt="gal3.11" class="mySlidesImg fade">
+                <img src="components/pictures/pages_bg/subjekty/galerie/sub3/12.webp" alt="gal3.12" class="mySlidesImg fade">
+                <img src="components/pictures/pages_bg/subjekty/galerie/sub3/13.webp" alt="gal3.13" class="mySlidesImg fade">
+                <img src="components/pictures/pages_bg/subjekty/galerie/sub3/14.webp" alt="gal3.14" class="mySlidesImg fade">
+                <img src="components/pictures/pages_bg/subjekty/galerie/sub3/15.webp" alt="gal3.15" class="mySlidesImg fade">
+                <img src="components/pictures/pages_bg/subjekty/galerie/sub3/16.webp" alt="gal3.16" class="mySlidesImg fade">
+                <img src="components/pictures/pages_bg/subjekty/galerie/sub3/17.webp" alt="gal3.17" class="mySlidesImg fade">
+                <img src="components/pictures/pages_bg/subjekty/galerie/sub3/18.webp" alt="gal3.18" class="mySlidesImg fade">
+                <img src="components/pictures/pages_bg/subjekty/galerie/sub3/19.webp" alt="gal3.19" class="mySlidesImg fade">
+                <img src="components/pictures/pages_bg/subjekty/galerie/sub3/20.webp" alt="gal3.20" class="mySlidesImg fade">
+            </div>
+            <div id="gal4" class="gallery">
+                <img src="components/pictures/pages_bg/subjekty/galerie/sub4/1.webp" alt="gal4.1" class="mySlidesImg fade">
+                <img src="components/pictures/pages_bg/subjekty/galerie/sub4/2.webp" alt="gal4.2" class="mySlidesImg fade">
+                <img src="components/pictures/pages_bg/subjekty/galerie/sub4/3.webp" alt="gal4.3" class="mySlidesImg fade">
+                <img src="components/pictures/pages_bg/subjekty/galerie/sub4/4.webp" alt="gal4.4" class="mySlidesImg fade">
+            </div>
+            <div id="arrowsss">
+                <div id="arrowleft">
+                    <a id="arrowl" onclick="plusSlidesImg(-1)"><i class="arrow_left"></i></a>
+                </div>
+                <div id="arrowright">
+                    <a id="arrowr" onclick="plusSlidesImg(1)"><i class="arrow_right"></i></a>
+                </div>
+            </div>
+            <div id="all_p">
+                <div id="all_p1">
+                    <p onclick="all_p1_1()">MLEJN</p>
+                    <p onclick="all_p1_2()">REZIDENCE NOVEM - PARKOVACÍ MÍSTA / PODĚBRADY</p>
+                    <p onclick="all_p1_3()">APARTMÁNY / PODĚBRADY</p>
+                    <p onclick="all_p1_4()">AREÁL / KŘEČKOV</p>
+                </div>
+            </div>
+        </div>
+        <div class="arrowss">
+            <div id="arrowleft">
+                <a id="arrowl" onclick="plusSlides(-1)"><i class="arrow_left"></i></a>
+            </div>
+            <div id="arrowright">
+                <a id="arrowr" onclick="plusSlides(1)"><i class="arrow_right"></i></a>
+            </div>
+            <p style="color: white; cursor: pointer;" onclick="all_p()">VŠECHNY SUBJEKTY</p>
+        </div>
+    </section>
+    <section id="contact">
+        <div class="middle">
+            <div class="formwidth">
+            <p style="text-align: justify; font-size: 12px;">Pokud Vás naše nabídka zaujala, rádi Vám poskytneme další informace a cenovou kalkulaci.
+                Můžete využít náš kontaktní formulář, popřípadě nás můžete kontaktovat na telefonních číslech
+                umístěných pod formulářem.</p>
+            <h3 style="text-align: start; font-weight: 300;">NAPIŠTE NÁM</h3>
+            <div class="form">
+                <form action="#" id="form" style="text-align: start;">
+                    <div class="labels">
+                        <div class="name">
+                            <label for="nameform">KŘESTNÍ JMÉNO</label>
+                            <input type="name" name="name" id="nameform" autocomplete="name">
+                        </div>
+                        <div class="surname">
+                            <label for="surnameform">PŘIJMENÍ</label>
+                            <input type="surname" name="surname" id="surnameform" autocomplete="surname">
+                        </div>
+                        <div class="email">
+                            <label for="email">EMAIL*</label>
+                            <input type="email" name="email" required id="emailform" autocomplete="email">
+                        </div>
+                        <div class="telephone">
+                            <label for="telform">TELEFON</label>
+                            <input type="tel" name="tel" id="telform" autocomplete="tel">
+                        </div>
+                    </div>
+                    <div class="message">
+                        <label for="message">ZPRÁVA*</label>
+                        <textarea name="message" required id="messageform"></textarea>
+                    </div>
+                    <button class="submit" type="submit" id="submitform">ODESLAT</button>
+                </form>
+                <a href="#" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                <div style="justify-items: center; display: grid;">
+                    <p style="text-align: justify; padding-top: 10px; margin: 0;"><a href="mailto:info@sstavby.cz">INFO@SSTAVBY.CZ</a> | <a href="tel:+420724257284">(+420) 724 257 284</a>, <a href="tel:+420775662749">(+420) 775 662 749</a></p>
+                    <p style="text-align:justify; margin: 0;">S STAVBY S.R.O | IČ: 02010151 | ZA NÁDRAŽÍM 58 PODĚBRADY V, 290 01 PODĚBRADY</p>
+                </div>
+                <img src="components/pictures/logos/LOGO.png" alt="logo_about">
+                <p style="text-align: center; margin: 0; margin-bottom: 20px; font-size: 12px;">© 2024 | <a href="https://www.mrwolfus-webdesign.com" target="_blank">mrwolfus - webdesign</a> | ALL RIGHTS RESERVED</p>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <script src="components/script_pronajem.js?version=2.1"></script>
+    <script src="https://kit.fontawesome.com/b02337ce67.js" crossorigin="anonymous"></script>
+</body>
+</html>

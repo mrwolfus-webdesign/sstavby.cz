@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stavební firma | S Stavby</title>
+    <link rel="icon" href="components/pictures/favicon/FVCN.ico">
+    <link href="https://fonts.cdnfonts.com/css/hero-new" rel="stylesheet">
+    <link rel="stylesheet" href="components/style.css?version=3.2">
+</head>
+<body>
+    <nav id="navbar">
+        <div class="logo">
+            <img src="components/pictures/logos/LOGO.png" alt="logo">
+        </div>
+        <div class="links">
+            <ul id="links_nav">
+                <li><a href="index.html">DOMŮ</a></li>
+                <li><a href="index.html#about">O NÁS</a></li>
+                <li><a href="#developer">DEVELOPERSKÉ PROJEKTY</a></li>
+                <li><a href="pronajem.html">PRONÁJEM</a></li>
+                <li><a href="index.html#services">STAVBA</a></li>
+                <li><a href="index.html#reference">REFERENCE</a></li>
+                <li><a href="#contact">KONTAKT</a></li>
+            </ul>
+        </div>
+        <div id="chb">
+            <input type="checkbox" id="menu_checkbox" onclick="myFunction();test()">
+            <label for="menu_checkbox">
+                <div id="first"></div>
+                <div id="second"></div>
+                <div id="third"></div>
+            </label>
+        </div>
+    </nav>
+    <nav id="navbar_mobile">
+        <div class="links">
+            <ul id="links_nav">
+                <li><a href="index.html">DOMŮ</a></li>
+                <li><a href="index.html#about">O NÁS</a></li>
+                <li><a href="#developer">DEVELOPERSKÉ PROJEKTY</a></li>
+                <li><a href="pronajem.html">PRONÁJEM</a></li>
+                <li><a href="index.html#services">STAVBA</a></li>
+                <li><a href="index.html#reference">REFERENCE</a></li>
+                <li><a href="#contact">KONTAKT</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="developer">
+        <a href="index.html"><img src="components/pictures/logos/LOGO.png" alt="logo"></a>
+        <div class="middle">
+            <h1>DEVELOPERSKÉ PROJEKTY</h1>
+            <p style="text-align: justify;">Naše firma se specializuje na realizaci developerských projektů, přičemž klademe důraz na
+                kvalitu, inovaci a udržitelnost. Naše projekty zahrnují širokou škálu nemovitostí, včetně
+                rezidenčních, komerčních a multifunkčních objektů. Díky našim zkušenostem a profesionálnímu
+                přístupu vytváříme prostory, které splňují nároky moderního bydlení a podnikání. Jsme hrdí na to,
+                že naše projekty přispívají k rozvoji a zlepšení kvality života v daných lokalitách.</p>
+            <div class="main_buttons">
+                <a class="button" href="#projekty">PROJEKTY</a>
+            </div>
+        </div>
+        <div id="arrowdown">
+            <a href="#projekty" id="arrowd"><i class="arrow_down"></i></a>
+        </div>
+        <div id="arrowup">
+            <a href="#developer" id="arrowu"><i class="arrow_up"></i></a>
+        </div>
+    </section>
+    <section id="projekty">
+        <section id="projekt1" class="mySlides fade">
+            <div class="page">
+                <div class="name">
+                    <h2>REZIDENCE NOVEM / PODĚBRADY</h2>
+                    <div class="buttons_pronajem">
+                    <a class="button" onclick="myFunctionR1();galer2()">GALERIE</a>
+                    <a class="button" onclick="myFunctionR1();myFunctionInfo1()">VÍCE INFORMACÍ</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="projekt2" class="mySlides fade">
+            <div class="page">
+                <div class="name">
+                    <h2>STUDENTSKÁ 435 / PODĚBRADY</h2>
+                    <div class="buttons_pronajem">
+                    <a class="button" onclick="myFunctionR1();galer3()">GALERIE</a>
+                    <a class="button" onclick="myFunctionR1()">VÍCE INFORMACÍ</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="projekt3" class="mySlides fade">
+            <div class="page">
+                <div class="name">
+                    <h2>DVOJDOMEK / PODĚBRADY</h2>
+                    <div class="buttons_pronajem">
+                    <a class="button" onclick="myFunctionR1();galer4()">GALERIE</a>
+                    <a class="button" onclick="myFunctionR1()">VÍCE INFORMACÍ</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="projekt4" class="mySlides fade">
+            <div class="page">
+                <div class="name">
+                    <h2>REZIDENCE ZÁMECKÁ / LOVOSICE</h2>
+                    <div class="buttons_pronajem">
+                    <a class="button" onclick="myFunctionR1();galer1()">GALERIE</a>
+                    <a class="button" onclick="myFunctionR1()">VÍCE INFORMACÍ</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="projekt5" class="mySlides fade">
+            <div class="page">
+                <div class="name">
+                    <h2>REZIDENCE U POČETKY / NYMBURK</h2>
+                    <div class="buttons_pronajem">
+                    <a class="button" onclick="myFunctionR1();galer5()">GALERIE</a>
+                    <a class="button" onclick="myFunctionR1()">VÍCE INFORMACÍ</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div id="popup_reference">
+            <div id="info1">
+                <h2>REZIDENCE</h2>
+                <p>V samém srdci lázeňského města Poděbrad jsme postavili bytový komplex,
+                    Rezidenci Novem, která koncepčně zapadá do celé kompoziční linky města. Hlavní
+                    prvky této stavby jsou moderní design exteriéru i interiéru, přírodní elementy,
+                    elegance a čisté tvary. Špičkové standardy vybavení bytů a provedení stavby
+                    v energetické třídě B byly jsou samozřejmost.
+                    Tento uzavřený komplex disponuje 42 byty, 3 ateliéry, dále má 24 krytých a 34
+                    venkovních parkovacích stání. Všechny byty mají vlastní terasu, lodžii nebo
+                    předzahrádku a většina z nich má sklep v konkrétním patře.</p>
+                    <div class="main_buttons">
+                        <a href="#contact" class="button">KONTAKT</a>
+                    </div>
+            </div>
+            <div id="all_d">
+                <div id="all_d1">
+                    <h2 style="color: blue;">PŘIPRAVUJEME...</h2>
+                    <p onclick="all_d1_66()">REZIDENCE U POČETKY / NYMBURK</p>
+                </div>
+                <div id="all_d2">
+                    <h2 style="color: yellow;">AKTUÁLNÍ</h2>
+                    <p onclick="all_d1_22()">REZIDENCE ZÁMECKÁ / LOVOSICE</p>
+                </div>
+                <div id="all_d3">
+                    <h2 style="color: green;">REALIZOVANÉ</h2>
+                    <p onclick="all_d1_33()">STUDENTSKÁ 435 / PODĚBRADY</p>
+                    <p onclick="all_d1_44()">REZIDENCE NOVEM / PODĚBRADY</p>
+                    <p onclick="all_d1_55()">DVOJDOMEK / PODĚBRADY</p>
+                </div>
+            </div>
+            <div id="gal11" class="gallery">
+                <img src="components/pictures/pages_bg/projekty/probiha_realizace/1_1.webp" alt="gal1.1" class="mySlidesImg fade">
+                <img src="components/pictures/pages_bg/projekty/probiha_realizace/1_2.webp" alt="gal1.2" class="mySlidesImg fade">
+                <img src="components/pictures/pages_bg/projekty/probiha_realizace/1_3.webp" alt="gal1.3" class="mySlidesImg fade">
+                <img src="components/pictures/pages_bg/projekty/probiha_realizace/1_4.webp" alt="gal1.4" class="mySlidesImg fade">
+                <img src="components/pictures/pages_bg/projekty/probiha_realizace/1_5.webp" alt="gal1.5" class="mySlidesImg fade">
+            </div>
+            <div id="gal22" class="gallery">
+                <img src="components/pictures/pages_bg/projekty/realizovane/1_1.webp" alt="gal2.1" class="mySlidesImg fade">
+                <img src="components/pictures/pages_bg/projekty/realizovane/1_2.webp" alt="gal2.2" class="mySlidesImg fade">
+                <img src="components/pictures/pages_bg/projekty/realizovane/1_3.webp" alt="gal2.3" class="mySlidesImg fade">
+                <img src="components/pictures/pages_bg/projekty/realizovane/1_4.webp" alt="gal2.4" class="mySlidesImg fade">
+                <img src="components/pictures/pages_bg/projekty/realizovane/1_5.webp" alt="gal2.5" class="mySlidesImg fade">
+            </div>
+            <div id="gal33" class="gallery">
+                <img src="components/pictures/pages_bg/projekty/realizovane/2_1.webp" alt="gal3.1" class="mySlidesImg fade">
+                <img src="components/pictures/pages_bg/projekty/realizovane/2_2.webp" alt="gal3.2" class="mySlidesImg fade">
+                <img src="components/pictures/pages_bg/projekty/realizovane/2_3.webp" alt="gal3.3" class="mySlidesImg fade">
+                <img src="components/pictures/pages_bg/projekty/realizovane/2_4.webp" alt="gal3.4" class="mySlidesImg fade">
+                <img src="components/pictures/pages_bg/projekty/realizovane/2_5.webp" alt="gal3.5" class="mySlidesImg fade">
+                <img src="components/pictures/pages_bg/projekty/realizovane/2_6.webp" alt="gal3.6" class="mySlidesImg fade">
+            </div>
+            <div id="gal44" class="gallery">
+                <img src="components/pictures/pages_bg/projekty/realizovane/3_1.webp" alt="gal4.1" class="mySlidesImg fade">
+                <img src="components/pictures/pages_bg/projekty/realizovane/3_2.webp" alt="gal4.2" class="mySlidesImg fade">
+                <img src="components/pictures/pages_bg/projekty/realizovane/3_3.webp" alt="gal4.3" class="mySlidesImg fade">
+            </div>
+            <div id="gal55" class="gallery">
+                <img src="components/pictures/pages_bg/projekty/pripravovane/5_1.webp" alt="gal5.1" class="mySlidesImg fade">
+            </div>
+            <div id="arrowsss">
+                <div id="arrowleft">
+                    <a id="arrowl" onclick="plusSlidesImg(-1)"><i class="arrow_left"></i></a>
+                </div>
+                <div id="arrowright">
+                    <a id="arrowr" onclick="plusSlidesImg(1)"><i class="arrow_right"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="arrowss">
+            <div id="arrowleft">
+                <a id="arrowl" onclick="plusSlides(-1)"><i class="arrow_left"></i></a>
+            </div>
+            <div id="arrowright">
+                <a id="arrowr" onclick="plusSlides(1)"><i class="arrow_right"></i></a>
+            </div>
+            <p style="color: white; cursor: pointer;" onclick="all_d()">VŠECHNY PROJEKTY</p>
+        </div>
+    </section>
+    <section id="contact">
+        <div class="middle">
+            <div class="formwidth">
+            <p style="text-align: justify; font-size: 12px;">Pokud Vás naše nabídka zaujala, rádi Vám poskytneme další informace a cenovou kalkulaci.
+                Můžete využít náš kontaktní formulář, popřípadě nás můžete kontaktovat na telefonních číslech
+                umístěných pod formulářem.</p>
+            <h3 style="text-align: start; font-weight: 300;">NAPIŠTE NÁM</h3>
+            <div class="form">
+                <form action="#" id="form" style="text-align: start;">
+                    <div class="labels">
+                        <div class="name">
+                            <label for="nameform">KŘESTNÍ JMÉNO</label>
+                            <input type="name" name="name" id="nameform" autocomplete="name">
+                        </div>
+                        <div class="surname">
+                            <label for="surnameform">PŘIJMENÍ</label>
+                            <input type="surname" name="surname" id="surnameform" autocomplete="surname">
+                        </div>
+                        <div class="email">
+                            <label for="email">EMAIL*</label>
+                            <input type="email" name="email" required id="emailform" autocomplete="email">
+                        </div>
+                        <div class="telephone">
+                            <label for="telform">TELEFON</label>
+                            <input type="tel" name="tel" id="telform" autocomplete="tel">
+                        </div>
+                    </div>
+                    <div class="message">
+                        <label for="message">ZPRÁVA*</label>
+                        <textarea name="message" required id="messageform"></textarea>
+                    </div>
+                    <button class="submit" type="submit" id="submitform">ODESLAT</button>
+                </form>
+                <a href="#" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                <div style="justify-items: center; display: grid;">
+                    <p style="text-align: justify; padding-top: 10px; margin: 0;"><a href="mailto:info@sstavby.cz">INFO@SSTAVBY.CZ</a> | <a href="tel:+420724257284">(+420) 724 257 284</a>, <a href="tel:+420775662749">(+420) 775 662 749</a></p>
+                    <p style="text-align:justify; margin: 0;">S STAVBY S.R.O | IČ: 02010151 | ZA NÁDRAŽÍM 58 PODĚBRADY V, 290 01 PODĚBRADY</p>
+                </div>
+                <img src="components/pictures/logos/LOGO.png" alt="logo_about">
+                <p style="text-align: center; margin: 0; margin-bottom: 20px; font-size: 12px;">© 2024 | <a href="https://www.mrwolfus-webdesign.com" target="_blank">mrwolfus - webdesign</a> | ALL RIGHTS RESERVED</p>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <script src="components/script_developer.js?version=2.1"></script>
+    <script src="https://kit.fontawesome.com/b02337ce67.js" crossorigin="anonymous"></script>
+</body>
+</html>
