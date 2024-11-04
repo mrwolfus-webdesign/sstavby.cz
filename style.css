@@ -1,0 +1,1170 @@
+:root{
+    font-family: 'Hero New', sans-serif;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+li{
+    list-style-type: none;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+#main_page{
+    height: 100vh;
+    width: 100%;
+    background-image: url("pictures/pages_bg/main_page.webp");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#navbar{
+    width: 100%;
+    position: fixed;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    display: flex;
+    z-index: 1;
+    transition: all .3s linear, z-index 0s;
+}
+#navbar img{
+    width: auto;
+    height: 100px;
+    opacity: 0;
+}
+#main_page img{
+    position: absolute;
+    width: auto;
+    height: 100px;
+    z-index: 9999;
+}
+#navbar ul{
+    color: white;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s linear, visibility 0.3s linear;
+}
+#navbar ul li{
+    display: inline;
+    padding: 10px;
+}
+#navbar ul li a{
+    transition: text-decoration .3s linear;
+}
+#navbar ul li a:hover{
+    text-decoration: underline;
+}
+
+#menu_checkbox {
+    display: none;
+}
+label {
+    display: block;
+    width: 60px;
+    height: 60px;
+    /*margin: -30px auto 0 auto;*/
+    cursor: pointer;
+    padding-right: 30px;
+}
+label:before {
+    content: "";
+    position: fixed;
+    top: 0;
+    right: 0;
+    transition: 1.2s cubic-bezier(0, 0.96, 1, 0.02) background-color;
+}
+label div {
+    position: relative;
+    top: 0;
+    height: 2px;
+    background-color: #fff;
+    margin-bottom: 8px;
+    transition: 0.3s ease transform, 0.3s ease top, 0.3s ease width,
+      0.3s ease right;
+    border-radius: 2px;
+}
+label div:first-child {
+    transform-origin: 0;
+}
+label div:last-child {
+    margin-bottom: 0;
+    transform-origin: 60px;
+}
+label div:nth-child(2) {
+    right: 0;
+    width: 60px;
+}
+#menu_checkbox:checked + label div:first-child {
+    top: -28px;
+    transform: rotateZ(45deg);
+    margin: 0;
+}
+#menu_checkbox:checked + label div:last-child {
+    top: 28px;
+    transform: rotateZ(45deg);
+    margin: 0;
+    opacity: 0;
+}
+#menu_checkbox:checked + label div:nth-child(2) {
+    width: 85px;
+    top: 0;
+    right: 13px;
+    transform: rotateZ(-45deg);
+    margin: 0;
+}
+#chb label{
+    display: grid;
+    align-content: center;
+}
+.middle{
+    width: 60%;
+    margin: auto;
+    padding-top: 10%;
+    min-height: 60%;
+    text-align: center;
+    color: white;
+    letter-spacing: 3px;
+    overflow: hidden;
+}
+#main_page .middle,
+#pronajem .middle,
+#developer .middle{
+    position: relative;
+    animation-name: example;
+    animation-duration: 1.2s;
+}
+h1{
+    font-weight: 500;
+    font-size: 34px;
+}
+h2{
+    font-weight: 500;
+    font-size: 30px;
+}
+.button{
+    background: none;    
+    color: white;
+    border: 1px solid white;
+    border-radius: 30px;
+    padding: 8px;
+    letter-spacing: 3px;
+    font-weight: 400;
+    transition: all 0.3s linear, visibility 0s;
+    cursor: pointer;
+}
+.button:hover{
+    background-color: white;
+    color: black;
+}
+.middle .button{
+    margin-left: 10px;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+.middle img{
+    width: 30%;
+}
+p{
+    font-size: 14px;
+    font-weight: 300;
+}
+.main_buttons{
+    display: grid;
+    margin-top: 5%;
+    align-items: center;
+    width: 40%;
+}
+.main_buttons .button{
+    width: 100%;
+    margin: auto;
+    margin-top: 2%;
+    display: flex;
+    flex-direction: column;
+}
+.arrow_down{
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 20px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+.arrow_up{
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 20px;
+    transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+}
+.arrow_left{
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 20px;
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+    cursor: pointer;
+}
+.arrow_right{
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 20px;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    cursor: pointer;
+}
+#arrowdown{
+    position: fixed;
+    top: 88%;
+    right: 3%;
+    transition: all 0.3s linear;
+    z-index: 998;
+    opacity: 1;
+}
+#arrowdown:hover{
+    top: 90%;
+}
+#arrowup{
+    visibility: hidden;
+    opacity: 0;
+    position: fixed;
+    top: 86%;
+    right: 5%;
+    transition: all 0.3s linear;
+    z-index: 998;
+}
+#arrowup:hover{
+    top: 84%;
+}
+#arrowl{
+    transition: all 0.3s linear;
+}
+#arrowr{
+    transition: all 0.3s linear;
+}
+#arrowl:hover{
+    margin-right: 2%;
+}
+#arrowr:hover{
+    margin-left: 2%;
+}
+
+
+#projects{
+    min-height: 100vh;
+    width: 100%;
+    background-image: url("pictures/pages_bg/projects.webp");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#about{
+    min-height: 100vh;
+    width: 100%;
+    background-image: url("pictures/pages_bg/about.webp");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#services{
+    min-height: 100vh;
+    width: 100%;
+    background-image: url("pictures/pages_bg/services.webp");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#services .middle{
+    width: 85%;
+    overflow: visible;
+}
+.twosides{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-column-gap: 10px;
+}
+.leftside{
+display: grid;
+align-items: center;
+grid-row-gap: 10px;
+}
+#popup_services{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.95;
+    text-align: center;
+    visibility: hidden;
+    z-index: 999999;
+}
+#popup_services h2{
+    font-size: 20px;
+    margin-top: 5%;
+    color: white;
+}
+#reference{
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 100% 100% 100%;
+    scroll-behavior:smooth;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+#reference1{
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("pictures/pages_bg/reference/reference1.webp");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#reference2{
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("pictures/pages_bg/reference/reference2.webp");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#reference3{
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("pictures/pages_bg/reference/reference3.webp");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#reference4{
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("pictures/pages_bg/reference/reference4.webp");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#reference5{
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("pictures/pages_bg/reference/reference5.webp");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#reference6{
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("pictures/pages_bg/reference/reference6.webp");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#reference7{
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("pictures/pages_bg/reference/reference7.webp");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#reference8{
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("pictures/pages_bg/reference/reference8.webp");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#reference9{
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("pictures/pages_bg/reference/reference9.webp");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#reference10{
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("pictures/pages_bg/reference/reference10.webp");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#reference11{
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("pictures/pages_bg/reference/reference11.webp");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#reference12{
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("pictures/pages_bg/reference/reference12.webp");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#reference13{
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("pictures/pages_bg/reference/reference13.webp");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#reference14{
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("pictures/pages_bg/reference/reference14.webp");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#reference15{
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("pictures/pages_bg/reference/reference15.webp");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#reference16{
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("pictures/pages_bg/reference/reference16.webp");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#reference17{
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("pictures/pages_bg/reference/reference17.webp");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#reference18{
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("pictures/pages_bg/reference/reference18.webp");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#reference19{
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("pictures/pages_bg/reference/reference19.webp");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#reference20{
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("pictures/pages_bg/reference/reference20.webp");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#reference21{
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("pictures/pages_bg/reference/reference21.webp");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#reference22{
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("pictures/pages_bg/reference/reference22.webp");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#reference23{
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("pictures/pages_bg/reference/reference23.webp");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#reference24{
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("pictures/pages_bg/reference/reference24.webp");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#reference25{
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("pictures/pages_bg/reference/reference25.webp");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#reference .page{
+    height: 100%;
+    width: 100%;
+}
+#reference .name{
+    position: relative;
+    top: 5%;
+    left: 3%;
+    color: white;
+    width: 40%;
+}
+.middle{
+    z-index: 2;
+    position: relative;
+}
+.name{
+    z-index: 2;
+}
+#reference .name h2{
+    margin-top: 0;
+}
+#reference .name .button{
+    padding: 8px 20% 8px 20%;
+}
+#reference .name .button:hover{
+    text-shadow: 0 0 0;
+}
+#technika{
+    height: 100vh;
+    width: 100%;
+    background-color: black;
+    overflow: hidden;
+}
+#videobg{
+    min-height: 100%;
+    min-width: 100%;
+    opacity: 0.4;
+}
+#technika .middle{
+    z-index: 2;
+    position: absolute;
+    top: 500%;
+    left: 20%;
+}
+#contact{
+    min-height: 100vh;
+    width: 100%;
+    background-image: url("pictures/pages_bg/contact.webp");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#contact .middle{
+    padding-top: 10%;
+}
+input, textarea{
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid white;
+    width: 100%;
+    height: 100%;
+    color: white;
+    font-size: 16px;
+}
+#contact label{
+    width: 100%;
+    height: auto;
+}
+
+.labels{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-column-gap: 20px;
+    grid-row-gap: 50%;
+}
+textarea{
+    border: 1px solid white;
+    height: 120px;
+    resize: none;
+}
+.message{
+    margin-top: 12%;
+}
+.formwidth{
+    width: 98%;
+    margin: auto;
+}
+.submit{
+    background:transparent;
+    border: none;
+    color: white;
+    font-size: 16px;
+    font-family: 'Hero New', sans-serif;
+    font-weight: 500;
+    text-align: right;
+    width: 100%;
+    cursor: pointer;
+    transition: all .3s linear;
+}
+.submit:hover{
+    color: grey;
+}
+#contact a i{
+    font-size: 35px;
+    font-weight: 100;
+    padding: 15px 10px 0 10px;
+    transition: all .3s linear;
+    color: white;
+}
+#contact a i:hover{
+    color: grey;
+}
+#contact .middle{
+    height: 95%;
+}
+#contact{
+    overflow: hidden;
+}
+#contact a{
+    transition: all .3s linear;
+    color: white;
+}
+#contact a:hover{
+    color: grey;
+}
+
+html {
+    overflow-y: scroll;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+}
+html::-webkit-scrollbar { /* WebKit */
+    width: 0;
+    height: 0;
+}
+.arrowss{
+    position: absolute;
+    height: 20%;
+    width: 60%;
+    margin-left: 20%;
+    top: 480%;
+    text-align: center;
+}
+#arrowsss{
+    position: absolute;
+    height: 20%;
+    width: 60%;
+    margin-left: 20%;
+    top: 80%;
+    text-align: center;
+}
+.arrow_left{
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 20px;
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+    margin-right: 3%;
+}
+.arrow_right{
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 20px;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    margin-left: 3%;
+}
+#a1, #a2, #a3, #a4, #a5, #a6, #a7, #a8{
+    text-align: justify;
+    width: 60%;
+    margin: auto;
+    color: white;
+    font-size: 14px;
+    display: none;
+}
+#a1 li, #a2 li, #a3 li, #a4 li, #a5 li, #a6 li, #a7 li, #a8 li{
+    list-style: circle;
+}
+#a1 .main_buttons, #a2 .main_buttons, #a3 .main_buttons, 
+#a4 .main_buttons, #a5 .main_buttons, #a6 .main_buttons,
+ #a7 .main_buttons, #a8 .main_buttons{
+    text-align: center;
+    margin-top: 0;
+}
+#a1 h2, #a2 h2, #a3 h2, #a4 h2, #a5 h2, #a6 h2, #a7 h2, #a8 h2{
+    text-align: center;
+}
+#popup_reference{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.95);
+    text-align: center;
+    visibility: hidden;
+    z-index: 9999999;
+}
+.fade {
+    animation-name: fade;
+    animation-duration: .3s;
+}  
+@keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+.gallery{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+.gallery img{
+    max-width: 80%;
+    max-height: 80%;
+    margin: auto;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+#ref1, #ref2, #ref3, #ref4, #ref5, #ref6,
+#ref7, #ref8, #ref9, #ref10{
+    display: none;
+}
+#pronajem{
+    height: 100vh;
+    width: 100%;
+    background-image: url("pictures/pages_bg/pronajem.webp");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#pronajem img{
+    position: absolute;
+    width: auto;
+    height: 100px;
+    z-index: 9999;
+}
+#subjekty{
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 100%;
+    scroll-behavior:smooth;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+#subjekt1{
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("pictures/pages_bg/subjekty/subjekt1.webp");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#subjekt2{
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("pictures/pages_bg/subjekty/subjekt2.webp");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#subjekt3{
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("pictures/pages_bg/subjekty/subjekt3.webp");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#subjekt4{
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("pictures/pages_bg/subjekty/subjekt4.webp");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#subjekty .page{
+    height: 100%;
+    width: 100%;
+}
+#subjekty .name{
+    position: relative;
+    top: 5%;
+    left: 3%;
+    color: white;
+    width: 50%;
+}
+#subjekty .name h2{
+    margin-top: 0;
+}
+#subjekty .name .button{
+    padding: 8px 20% 8px 20%;
+}
+#subjekty .name .button:hover{
+    text-shadow: 0 0 0;
+}
+#subjekty .arrowss{
+    top: 180%;
+}
+#developer{
+    height: 100vh;
+    width: 100%;
+    background-image: url("pictures/pages_bg/developer.webp");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#developer img{
+    position: absolute;
+    width: auto;
+    height: 100px;
+    z-index: 9999;
+}
+#projekty{
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 100%;
+    scroll-behavior:smooth;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+#projekt1{
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("pictures/pages_bg/projekty/realizovane/realizovane1.webp");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#projekt2{
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("pictures/pages_bg/projekty/realizovane/realizovane2.webp");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#projekt3{
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("pictures/pages_bg/projekty/realizovane/realizovane3.webp");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#projekt4{
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("pictures/pages_bg/projekty/probiha_realizace/probiha1.webp");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#projekt5{
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("pictures/pages_bg/projekty/pripravovane/pripravovane_1.webp");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#projekty .page{
+    height: 100%;
+    width: 100%;
+}
+#projekty .name{
+    position: relative;
+    top: 5%;
+    left: 3%;
+    color: white;
+    width: 50%;
+}
+#projekty .name h2{
+    margin-top: 0;
+}
+#projekty .name .button{
+    padding: 8px 20% 8px 20%;
+}
+#projekty .name .button:hover{
+    text-shadow: 0 0 0;
+}
+#projekty .arrowss{
+    top: 180%;
+}
+
+#info1, #info2, #info3, #info4, #info5, #info6{
+    text-align: justify;
+    width: 60%;
+    margin: auto;
+    color: white;
+    font-size: 14px;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+}
+#info1 .main_buttons, #info2 .main_buttons, #info3 .main_buttons, 
+#info4 .main_buttons, #info5 .main_buttons, #info6 .main_buttons{
+    text-align: center;
+    margin-top: 0;
+}
+#popup_reference h2{
+    text-align: center;
+    font-size: 20px;
+    margin-top: 5%;
+    color: white;
+}
+#gal1, #gal2, #gal3, #gal4{
+    display: none;
+}
+
+#navbar_mobile{
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    right: -100%;
+    background-color: white;
+    justify-content: center;
+    display: none;
+    align-items: center;
+    transition: all 0.3s linear;
+    z-index: 5;
+}
+#navbar_mobile a{
+    color: black;
+    text-align: center;
+}
+#navbar_mobile li{
+    margin-top: 20%;
+}
+#navbar_mobile ul {
+    text-align: center;
+}
+.buttons_pronajem{
+    display: grid;
+    width: 100%;
+    grid-template-columns: 50% 50%;
+    grid-column-gap: 10px;
+    text-align: center;
+}
+@keyframes example {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+#all_r{
+    display: none;
+    grid-template-columns: 30% 30% 30%;
+    color: white;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+}
+#all_r p{
+    cursor: pointer;
+    transition: all .3s linear;
+}
+#all_r p:hover{
+    text-decoration: underline;
+}
+
+#all_d{
+    display: none;
+    grid-template-columns: 30% 30% 30%;
+    color: white;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+}
+#all_d p{
+    cursor: pointer;
+    transition: all .3s linear;
+}
+#all_d p:hover{
+    text-decoration: underline;
+}
+#all_d1, #all_d2, #all_d3{
+    height: 30%;
+}
+#all_p{
+    display: none;
+    grid-template-columns: 30%;
+    color: white;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+}
+#all_p p{
+    cursor: pointer;
+    transition: all .3s linear;
+}
+#all_p p:hover{
+    text-decoration: underline;
+}
+.middle, #technika .middle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 60vh;
+    flex-direction: column;
+}
+
+#arrowright{
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+#arrowleft{
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+
+@media (max-width:1915px){
+    #mnpb{
+        display: inline-block;
+    }
+}
+
+@media (max-width:1140px){
+    #navbar {
+        background-color: rgba(0, 0, 0, 0.9);
+    }
+    #navbar .links{
+        display: none;
+    }
+    #navbar_mobile{
+        display: grid;
+    }
+    .button{
+        display: inline-block;
+        font-size: 10px;
+    }
+    .middle{
+        min-height: 100%;
+        width: 80%;
+    }
+    #technika .middle{
+        width: 80%;
+        left: 10%;
+        top: 650%;
+        min-height: auto;
+    }
+    #contact .middle{
+        height: 100%;
+        padding-top: 20%;
+    }
+    #messageform{
+        width: 95%;
+        margin-top: 10%;
+    }
+    #about{
+        min-height: 100vh;
+    }
+    #services{
+        min-height: 110vh;
+    }
+    #about .middle{
+        height: 50%;
+    }
+    .twosides{
+        grid-template-columns: 100%;
+    }
+    #arrowdown, #arrowup{
+        display: none;
+    }
+    .arrowss{
+        top: 600%;
+    }
+    #a1, #a2, #a3, #a4, #a5, #a6, #a7, #a8,#info1, #info2, #info3, #info4, #info5, #info6{
+        width: 90%;
+        font-size: 12px;
+    }
+    #a1 p, #a2 p, #a3 p, #a4 p, #a5 p, #a6 p, #a7 p, #a8 p,#info1 p, #info2 p, #info3 p, #info4 p, #info5 p, #info6 p{
+        font-size: 12px;
+    }
+    label{
+        font-size: 12px;
+    }
+    .labels{
+        display: block;
+    }
+    input{
+        margin-bottom: 20px;
+        width: 95%;
+   }
+   .message{
+        margin-top: 0;
+   }
+   .gallery img{
+    margin-top: 60%;
+    margin-bottom: 60%;
+   }
+   .leftside a{
+    margin-bottom: 10px;
+   }
+   .twosides{
+    display: flex;
+    flex-wrap: wrap;
+   }
+   .twosides .leftside{
+    order: 2;
+    width: 100%;
+   }
+   .buttons_pronajem{
+    grid-row-gap: 10px;
+    grid-template-columns: 100%;
+   }
+   .middle, .name, #technika .middle{
+    z-index: 0;
+   }
+   #all_r p{
+    font-size: 12px
+   }
+   #popup_reference p{
+    font-size: 12px;
+   }
+   #all_d{
+    grid-template-columns: 60%;
+   }
+}
